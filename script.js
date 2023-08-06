@@ -68,6 +68,7 @@ const getPokemon = async(id)=>{
 const getAllPokemones=async(id)=>{
     // Usamos la función fetch para obtener informacion desde la direccion URL almacenada en la variable url junto con el numero del pokemon que queremos obtener.
     const res = await fetch(`${url}/${id}`);
+    console.log(res);
     // Luego, convertimos la información obtenida en un formato .json lo guardamos en una variable llamada pokemon.
     const pokemon = await res.json();
       // Finalmente, añadimos el pokemon a la lista pokemons para que podamos mostrarlo.
@@ -119,14 +120,18 @@ formulario.addEventListener("submit",(e)=>{
     e.preventDefault();
     //  obtenemos el texto que el usuario ha escrito en el formulario y lo guardamos en una variable llamada buscarPoke
     const buscarPoke = busqueda_poke.value;
+    console.log(buscarPoke);
 
     // Luego, comprobamos si buscarPoke no esta vacio Si el usuario ha escrito algo en el formulario, llamamos a la funcion getPokemon y le pasamos el texto que el usuario escribio. 
     //Luego, limpiamos el formulario para que esté listo para otra búsqueda.
     if(buscarPoke){
         getPokemon(buscarPoke);
+        console.log("lo encontre");
+
         busqueda_poke.value="";
 
     }else if(buscarPoke ===""){
+        console.log("vacio");
          // Si buscarPoke esta vacio, eso significa que el usuario no ha escrito nada en el formulario. 
          //En este caso, limpiamos la lista de pokemon y mostramos todos los pokémon nuevo
         pokemons=[];
