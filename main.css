@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #04854f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+a{
+    margin-top: 2rem;
+}
+
+h2{
+    letter-spacing: 3px;
+}
+
+.poke_caja_stilo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+.pokemon{
+    border-radius: 70px;
+    box-shadow: 0 3px 15px rgb(0,0,0,0.9);
+    border-top: 1px solid #e7d910;
+    border-bottom: 1px solid #e7d910;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+}
+.pokemon .img-container{
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+.pokemon .img-container img{
+    margin-top: 20px;
+    max-width: 90%;
+    filter: drop-shadow(0 5px 3px rgb(235, 228, 228));
+}
+
+.pokemon .info{
+    margin-top: 20px;
+}
+
+.pokemon .number{
+    background-color: #0a0a0a;
+    color: #e7d910;
+    border-radius: 10px 10px 10px;
+    top: -1px;
+    font-size: 1em;
+    padding: 5px 10px;
+}
+
+.pokemon .name{
+    margin: 15px 0 7px;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    color: rgb(188, 226, 16);
+}
+
+.type span{
+    color: rgb(188, 226, 16);
+    font-size: 1.2rem;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: 0.4s ease-in;
+    overflow: auto;
+    height: 100%;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    background-color: #aa9b16;
+    color:  rgb(33, 17, 182);
+}
+
+
+.pokemon:hover .stats{
+    transform: translateY(0);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    
+}
+
+.flex > ul{
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+
+
+.busqueda{
+    width: 350px;
+    height: 40px;
+    outline: none;
+    margin: 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #d3ae0c;;
+    border-top: 2px solid #d3ae0c;;
+    border-radius: 50px;
+    line-height: 1.2rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #d3ae0c;
+    letter-spacing: 2px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.busqueda::placeholder{
+    text-align: center;
+    color: #d6c887;
+    letter-spacing: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
